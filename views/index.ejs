@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/css/style.css'/>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/script.js"></script>
+    <title>Draw Board</title>
+</head>
+<body>
+<div class="d-flex flex-row justify-content-between">
+    <div class="block">
+        <canvas id="canvas">The browser does not support this technology!</canvas>
+    </div>
+    <div class="block panel">
+        <br>
+        <h1>Draw Board</h1>
+        <br>
+        <label for="radius">Brush size</label>
+        <input class="form-control" type="number" id="radius" value="10">
+        <br>
+        <label for="brush_color">Brush Color</label>
+        <input class="form-control" type="color" id="brush_color">
+        <button class="btn btn-danger right" id="clear">Clear</button>
+    </div>
+</div>
+</body>
+</html>
