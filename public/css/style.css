@@ -10,7 +10,10 @@ a, p, div, li, canvas {
 canvas {
     display: block;
     background-color: white;
+    border: 4px solid #831e72;
     position: relative;
+    top: 20px;
+    left: 20px;
 }
 
 .right {

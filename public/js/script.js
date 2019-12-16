@@ -5,8 +5,8 @@ $(document).ready(function () {
     let brush_color, radius;
     let socket = io.connect();
 
-    canvas.width = window.innerWidth - 300;
-    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth - 320;
+    canvas.height = window.innerHeight - 50;
 
     canvas.addEventListener('mousedown', function () {
         drawing = true;
@@ -20,8 +20,8 @@ $(document).ready(function () {
     });
 
     canvas.addEventListener('mousemove', function (e) {
-        const x = e.clientX;
-        const y = e.clientY;
+        const x = e.clientX - 24 + window.scrollX;
+        const y = e.clientY - 24 + window.scrollY;
 
         if (drawing) {
             socket.emit('draw', {
